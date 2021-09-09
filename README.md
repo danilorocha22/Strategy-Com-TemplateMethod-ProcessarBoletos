@@ -1,2 +1,2 @@
-# Strategy com Template - Processar Boletos
+# Strategy com Template Method - Processar Boletos
 Um simples projeto para implementação de um código de retorno de boletos usando os padrões Strategy e Template Method para disciplina de Padrões de Projetos.
