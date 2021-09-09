@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public final class LeituraRetornoBancoBradesco implements LeituraRetorno {
     @Override
-    public void preenchderDados(Boleto boleto, String[] vetor) {
+    public void completarDados(Boleto boleto, String[] vetor) {
         boleto.setAgencia(vetor[2]);
         boleto.setContaBancaria(vetor[3]);
         boleto.setDataVencimento(LocalDate.parse(vetor[4], FORMATO_DATA));

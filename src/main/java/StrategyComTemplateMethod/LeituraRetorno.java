@@ -25,7 +25,7 @@ public interface LeituraRetorno {
                 Boleto boleto = new Boleto();
                 boleto.setId(Integer.parseInt(vetor[0]));
                 boleto.setCodBanco(vetor[1]);
-                preenchderDados(boleto, vetor);//operação primitiva
+                completarDados(boleto, vetor);//operação primitiva
                 boletos.add(boleto);
             }
             return boletos;
@@ -36,6 +36,6 @@ public interface LeituraRetorno {
     }//metodo
 
     //Operação primitivo
-    abstract void preenchderDados(Boleto boleto, String[] vetor);
+    abstract void completarDados(Boleto boleto, String[] vetor);
 
 }//classe
