@@ -22,10 +22,7 @@ public interface LeituraRetorno {
 
             while ((line = reader.readLine()) != null) {
                 String[] vetor = line.split(";");
-                Boleto boleto = new Boleto();
-                boleto.setId(Integer.parseInt(vetor[0]));
-                boleto.setCodBanco(vetor[1]);
-                completarDados(boleto, vetor);//operação primitiva
+                Boleto boleto = completarDados(vetor);//operação primitiva
                 boletos.add(boleto);
             }
             return boletos;
@@ -36,6 +33,6 @@ public interface LeituraRetorno {
     }//metodo
 
     //Operação primitiva
-    abstract void completarDados(Boleto boleto, String[] vetor);
+    abstract Boleto completarDados(String[] vetor);
 
 }//classe
