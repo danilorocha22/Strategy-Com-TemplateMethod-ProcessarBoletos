@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public interface LeituraRetorno {
+public abstract interface LeituraRetorno {
     DateTimeFormatter FORMATO_DATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     DateTimeFormatter FORMATO_DATA_HORA = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
@@ -35,7 +35,7 @@ public interface LeituraRetorno {
         }
     }//metodo
 
-    //Operação primitivo
+    //Operação primitiva
     abstract void completarDados(Boleto boleto, String[] vetor);
 
 }//classe
