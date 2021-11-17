@@ -19,7 +19,6 @@ public interface LeituraRetorno {
             BufferedReader reader = Files.newBufferedReader(Paths.get(nomeArquivo));
             String line;
             List<Boleto> boletos = new ArrayList<>();
-
             while ((line = reader.readLine()) != null) {
                 String[] vetor = line.split(";");
                 Boleto boleto = completarDados(vetor);//operação primitiva
@@ -33,6 +32,6 @@ public interface LeituraRetorno {
     }//metodo
 
     //Operação primitiva
-    abstract Boleto completarDados(String[] vetor);
+    Boleto completarDados(String[] vetor);
 
 }//classe
